@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Angular App</title>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+		<link rel="stylesheet" href="assets/stylesheets/custom.css">
+	</head>
+	<body>
+		<div data-ng-include="'app/layout/frame.html'"></div>
+		<!--Vendor Scripts-->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-route.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="assets/scripts/ui-bootstrap-tpls-0.11.0.min.js"></script>
+
+	    <!-- Bootstrapping -->
+	    <script src="app/app.js"></script>
+	    <script src="app/config.js"></script>
+	    <script src="app/config.route.js"></script>
+
+
+    	<!--services-->
+	    <script src="app/services/directives.js"></script>   
+	    <script src="app/services/datacontext.js"></script>     
+	    <script src="app/services/filters.js"></script>     
+	    <script src="app/services/localStorageInterceptor.js"></script>     
+
+	    <!--app-->
+    	<script src="app/layout/frame.js"></script>	  	    
+    	<script src="app/dashboard/dashboard.js"></script>  
+    	<script src="app/dashboard/resolver.js"></script>  
+    	<script src="app/teams/teams.js"></script>  
+    	<script src="app/teams/team.js"></script>  
+    	<script src="app/teams/resolver.js"></script>  
+    	<script src="app/players/player.js"></script>  
+    	<script src="app/players/resolver.js"></script>  
+    	<script src="app/matches/matches.js"></script>  
+    	<script src="app/matches/match.js"></script>  
+    	<script src="app/matches/resolver.js"></script>  
+
+
+
+	</body>
+</html>

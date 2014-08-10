@@ -1,0 +1,94 @@
+<section id="player-view" class="mainbar" >
+<div class="container-fluid">
+	<div class="page-header">
+	  <h1>{{vm.player.nickname}}</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-4 col-sm-push-8 logo-container">
+			<img class="" src="{{vm.player.image}}" />
+		</div>
+		<div class="col-sm-8 col-sm-pull-4">
+			<dl class="dl-horizontal">
+			  <dt>First Name</dt>
+			  <dd>{{vm.player.firstName}}</dd>
+			  <dt>Last Name</dt>
+			  <dd>{{vm.player.lastName}}</dd>
+			  <dt>Birth Date</dt>
+			  <dd>{{vm.player.birthDate | date:'MM/dd/yyyy'}}</dd>
+			  <dt>Place of Birth</dt>
+			  <dd>{{vm.player.birthCity}}, {{vm.player.birthCountry}}</dd>
+			  <dt>Age</dt>
+			  <dd>{{vm.player.age}}</dd>
+			  <dt>Height</dt>
+			  <dd>{{vm.player.heightCm}} cm</dd>
+			  <dt>Weight</dt>
+			  <dd>{{vm.player.weightKg}} Kg</dd>
+			  <dt>Foot</dt>
+			  <dd>{{vm.player.foot}}</dd>
+			  <dt>Position</dt>
+			  <dd>{{vm.player.position}}</dd>
+			</dl>
+		</div>
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="col-sm-12 table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Goals</th>
+						<th>Penalty Goals</th>
+						<th>Own Goals</th>
+						<th>Assists</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{vm.player.goals}}</td>
+						<td>{{vm.player.penaltyGoals}}</td>
+						<td>{{vm.player.ownGoals}}</td>
+						<td>{{vm.player.assists}}</td>
+					</tr>
+				</tbody>
+				<tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Seasons</div>
+				<div class="table-responsive">
+					<table id="player-list" class="table table-striped">
+						<thead>
+							<tr>
+								<th>Season</th>
+								<th>Club</th>
+								<th>Appearances</th>
+								<th>Minutes</th>
+								<th>Goals</th>
+								<th>Red Cards</th>
+								<th>Yellow Cards</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="stat in vm.player.playerSeasonStats">
+								<td>{{stat.season}}</td>
+								<td>
+									<img src="{{stat.clubInfo.logo}}" width="20px" />
+									{{stat.clubInfo.name || "Unavailable"}}
+								</td>
+								<td>{{stat.appearances}}</td>
+								<td>{{stat.minPlayed}}</td>
+								<td>{{stat.goalsScored}}</td>
+								<td>{{stat.redCards}}</td>
+								<td>{{stat.yellowCards}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>

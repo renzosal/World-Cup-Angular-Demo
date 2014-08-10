@@ -1,0 +1,83 @@
+<section id="team-view" class="mainbar" >
+<div class="container-fluid">
+	<div class="page-header">
+	  <h1><img class="team-logo" src="{{vm.team.logo}}" />{{vm.team.name}} <small>Group {{vm.team.group}}</small></h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-4 col-sm-push-8 logo-container">
+			<img class="" src="{{vm.team.logo}}" />
+		</div>
+		<div class="col-sm-8 col-sm-pull-4">
+			<dl class="dl-horizontal">
+			  <dt>Founded</dt>
+			  <dd>{{vm.team.foundedYear}}</dd>
+			  <dt>Address</dt>
+			  <dd>{{vm.team.address}}</dd>
+			  <dt>Home Stadium</dt>
+			  <dd>{{vm.team.homeStadium}}</dd>
+			  <dt>Capacity</dt>
+			  <dd>{{vm.team.stadiumCapacity}}</dd>
+			</dl>
+		</div>
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="col-sm-12 table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Wins</th>
+						<th>Draws</th>
+						<th>Losses</th>
+						<th>Goals For</th>
+						<th>Goals Against</th>
+						<th>Goal Diff</th>
+						<th>Group Points</th>
+						<th>Group Rank</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{vm.team.wins}}</td>
+						<td>{{vm.team.draws}}</td>
+						<td>{{vm.team.losses}}</td>
+						<td>{{vm.team.goalsFor}}</td>
+						<td>{{vm.team.goalsAgainst}}</td>
+						<td>{{vm.team.goalsDiff}}</td>
+						<td>{{vm.team.groupPoints}}</td>
+						<td>{{vm.team.groupRank}}</td>
+					</tr>
+				</tbody>
+				<tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Players</div>
+				<div class="table-responsive">
+					<table id="player-list" class="table table-striped">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Name</th>
+								<th>Age</th>
+								<th>Position</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="player in vm.players">
+								<td><img width="40px" src="{{player.image}}" /></td>
+								<td><a href="#/players/{{player.id}}">{{player.nickname}}</a></td>
+								<td>{{player.age}}</td>
+								<td>{{player.position}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>

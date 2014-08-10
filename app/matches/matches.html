@@ -1,0 +1,41 @@
+<section id="matches-view" class="mainbar" >
+<div class="container-fluid">
+	<div class="page-header">
+	  <h1>Matches</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div ng-repeat="(date,matchGroup) in vm.matches">
+				<h3>{{date}}</h3>
+				<div class="list-group">
+					<a href="#matches/{{match.id}}" ng-repeat="match in matchGroup" class="list-group-item match">
+						<div class="team home">
+							<div class="team-image">
+								<img src="{{match.home.logo}}" height="60px"/>
+							</div>
+							<div class="team-name">
+								<span>{{match.home.name}}</span>
+							</div>
+						</div>
+						<div class="team away">
+							<div class="team-image">
+								<img src="{{match.away.logo}}" height="60px"/>
+							</div>
+							<div class="team-name">
+								<span>{{match.away.name}}</span>
+							</div>										
+						</div>
+						<div class="score">
+							<div class="fixture">
+								<div class="score-status">{{match.status}}</div>
+								<div class="score-result">{{match.homeScore}} - {{match.awayScore}}</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</section>

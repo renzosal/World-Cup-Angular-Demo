@@ -1,0 +1,13 @@
+<div data-ng-controller="frame as vm">
+	<header class="clearfix">
+		<div data-ng-include="'app/layout/topnav.html'"></div>
+	</header>
+
+	<section id="content" class="container">
+		<div data-ng-show="vm.isBusy" class="page-splash dissolve-animation">
+			<div data-wc-spinner="vm.spinnerOptions"></div>
+			<div class="page-splash-message page-splash-message-subtle">{{vm.busyMessage}}</div>
+		</div>
+		<div data-ng-view class="starter-template shuffle-animation"></div>
+	</section>
+</div>

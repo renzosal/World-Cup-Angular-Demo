@@ -1,0 +1,62 @@
+<section id="teams-view" class="mainbar" >
+<div class="container-fluid">
+	<div class="page-header">
+	  <h1>Teams</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Top Scoring Team: {{vm.topScoringTeam.name}}</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-4 col-sm-push-8 logo-container">
+							<img class="" src="{{vm.topScoringTeam.logo}}" />
+						</div>
+						<div class="col-sm-8 col-sm-pull-4">
+							<table class="table">
+								<tbody>
+									<tr class="success">
+										<td>Goals</td>
+										<td>{{vm.topScoringTeam.goalsFor}}</td>
+									</tr>
+									<tr>
+										<td>Against</td>
+										<td>{{vm.topScoringTeam.goalsAgainst}}</td>
+									</tr>
+									<tr>
+										<td>Matches</td>
+										<td>{{vm.topScoringTeam.matchesPlayed}}</td>
+									</tr>
+									<tr>
+										<td>Wins</td>
+										<td>{{vm.topScoringTeam.wins}}</td>
+									</tr>
+									<tr>
+										<td>Losses</td>
+										<td>{{vm.topScoringTeam.losses}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<input class="form-control" type="text" placeholder="Search Teams" ng-model="teamName" >
+			<br/>
+			<div class="list-group">
+			  <a ng-repeat="team in vm.teams | filter: teamName" href="#/teams/{{team.name}}" class="list-group-item">
+			  	<img width="30px" src="{{team.logo}}" />  {{team.name}}
+			  	 <span class="pull-right">
+			  	 	<b>Group: </b>{{team.group}}
+			  	 </span>
+			  </a>
+
+			</div>
+		</div>
+	</div>
+</div>
+</section>
