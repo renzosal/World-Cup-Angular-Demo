@@ -1,0 +1,20 @@
+{
+  "name": "WorldCup",
+  "version": "1.0.0",
+  "description": "AngularJS Demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renzosal/World-Cup-Angular-Demo.git"
+  },
+  "author": "Renzo Saldana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renzosal/World-Cup-Angular-Demo/issues"
+  },
+  "homepage": "https://github.com/renzosal/World-Cup-Angular-Demo"
+}
