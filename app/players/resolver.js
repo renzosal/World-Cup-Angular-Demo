@@ -14,10 +14,20 @@
 
 			var data = {
 				player: getPlayerById,
-				clubs: getAllClubs
+				clubs: getAllClubs,
+				allPlayers: getAllPlayers
 			};
 
 			return data;
+
+			function getAllPlayers() {
+
+				return datacontext
+					.getAllPlayers()
+					.then(function (data) {
+						return $q.when(data);
+					});
+			}
 
 			function getAllClubs() {
 

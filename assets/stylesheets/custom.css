@@ -599,6 +599,11 @@ a {
 #matches-view .match .away .team-name {margin-right: 70px;}
 #matches-view .match .away .team-image {right: 5px;}
 
+#match-view .team, #match-view .match-info {text-align: center;}
+#match-view .match-info .match-score {font-size: 50px; font-weight: bold; color: #45a3cc; padding: 25px 0;}
+#match-view .match-info .match-score span {font-size: 30px;}
+#match-view .match-info .match-date {font-size: 20px; margin-top: 20px;}
+
 .logo-container {text-align: center;}
 
 #forkongithub a{background:#97be65;color:#FFF;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}

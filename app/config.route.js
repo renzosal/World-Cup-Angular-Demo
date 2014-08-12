@@ -100,6 +100,21 @@
 				}
 			},
 			{
+				url: '/players',
+				config: {
+					templateUrl: 'app/players/players.html',
+					title: 'Players',
+					controller: 'players',
+					controllerAs: 'vm',
+					resolve: {
+						players: function (playersResolver){
+							alert("test");
+							return playersResolver.allPlayers();
+						}
+					}
+				}
+			},
+			{
 				url: '/players/:playerId',
 				config: {
 					templateUrl: 'app/players/player.html',

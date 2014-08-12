@@ -4,8 +4,27 @@
 	  <h1>Match</h1>
 	</div>
 	<div class="row">
-		<div class="col-sm-12">
-
+		<div class="col-sm-4 team">
+			<a href="#/teams/{{vm.match.home.name}}">
+				<h3>{{vm.match.home.name}}</h3>
+				<img src="{{vm.match.home.logo}}" />
+			</a>
+		</div>
+		<div class="col-sm-4 match-info">
+			<div class="match-date">{{vm.match.startTime | date: 'MM-dd-yyyy'}}</div>
+			<div class="match-score">
+				<span>({{vm.match.homePenalties}})</span>
+				{{vm.match.homeScore}} - {{vm.match.awayScore}}
+				<span>({{vm.match.awayPenalties}})</span>
+			</div>
+			<div class="match-status">{{vm.match.status}}</div>
+			<div class="match-venue">Stadium: {{vm.match.venue}}</div>
+		</div>
+		<div class="col-sm-4 team">
+			<a href="#/teams/{{vm.match.away.name}}">
+				<h3>{{vm.match.away.name}}</h3>
+				<img src="{{vm.match.away.logo}}" />
+			</a>
 		</div>
 	</div>
 
