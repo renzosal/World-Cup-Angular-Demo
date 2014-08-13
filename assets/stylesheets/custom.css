@@ -16,9 +16,25 @@ body {
 }
 
 .navbar-inverse {
-    background-color: #333;
+    background-color: #bee4f7;
+    border-color: #A5A5A5;
 }
 
+.navbar-inverse .navbar-brand, 
+.navbar-inverse .navbar-nav>li>a {
+    color: #344771;
+}
+
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus {
+    background-color: #0093cd;
+}
+
+.navbar>.container .navbar-brand, 
+.navbar>.container-fluid .navbar-brand {
+    font-weight: bold;
+}
 .sidebar-widget form {
     margin: 0em -1em;
 }
@@ -304,7 +320,7 @@ small {
 }
 
 .spinner {
-    margin: 20% auto 0 auto;
+    margin: 40px auto 0 auto;
     left: auto;
     top: auto !important;
 }
@@ -604,6 +620,13 @@ a {
 #match-view .match-info .match-score span {font-size: 30px;}
 #match-view .match-info .match-date {font-size: 20px; margin-top: 20px;}
 
+.page-splash-wc-logo {
+    background: url('../images/worldcup.png') 50% 50% no-repeat; 
+    width: 200px; 
+    height: 250px;
+    margin: 20% auto 0 auto;
+
+    }
 .logo-container {text-align: center;}
 
 #forkongithub a{background:#97be65;color:#FFF;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}

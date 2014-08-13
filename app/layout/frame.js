@@ -14,14 +14,14 @@
 		vm.busyMessage = "Please Wait...";
 		vm.isBusy = true;
 		vm.spinnerOptions = {
-            radius: 40,
-            lines: 7,
-            length: 0,
-            width: 30,
+            radius: 20,
+            lines: 10,
+            length: 10,
+            width: 8,
             speed: 1.7,
             corners: 1.0,
             trail: 100,
-            color: '#FBB018'
+            color: '#97be65'
 		};
 
 		$rootScope.$on('$routeChangeStart',

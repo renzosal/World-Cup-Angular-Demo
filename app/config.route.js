@@ -108,7 +108,6 @@
 					controllerAs: 'vm',
 					resolve: {
 						players: function (playersResolver){
-							alert("test");
 							return playersResolver.allPlayers();
 						}
 					}

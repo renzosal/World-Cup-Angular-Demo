@@ -5,9 +5,9 @@
 
 	<section id="content" class="container">
 		<div data-ng-show="vm.isBusy" class="page-splash dissolve-animation">
+			<div class="page-splash-wc-logo"></div>
 			<div data-wc-spinner="vm.spinnerOptions"></div>
-			<div class="page-splash-message page-splash-message-subtle">{{vm.busyMessage}}</div>
 		</div>
-		<div data-ng-view class="starter-template shuffle-animation"></div>
+		<div data-ng-view autoscroll="true" class="starter-template shuffle-animation"></div>
 	</section>
 </div>
