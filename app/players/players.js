@@ -7,14 +7,20 @@
 		.module('app')
 		.controller(controllerId, players);
 
-	players.$inject = ['players'];
+	players.$inject = ['topScorers'];
 
-	function players (players) {
+	function players (topScorers) {
 		var vm = this;
 		
-		vm.players = players;
-		console.log(players);
+		vm.selectedPlayer = topScorers[0];
+		vm.setSelected = setSelected;
+		vm.topScorers = topScorers;
 		return vm;
+
+
+		function setSelected (id) {
+			vm.selectedPlayer = _.find(topScorers, {id: id});
+		}
 	}
 
 })();

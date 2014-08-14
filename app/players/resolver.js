@@ -15,7 +15,8 @@
 			var data = {
 				player: getPlayerById,
 				clubs: getAllClubs,
-				allPlayers: getAllPlayers
+				allPlayers: getAllPlayers,
+				topScorers: getTopScorers
 			};
 
 			return data;
@@ -27,6 +28,15 @@
 					.then(function (data) {
 						return $q.when(data);
 					});
+			}
+
+			function getTopScorers() {
+
+					return datacontext
+						.getTopScorers()
+						.then(function (data){
+							return $q.when(data);
+						});
 			}
 
 			function getAllClubs() {

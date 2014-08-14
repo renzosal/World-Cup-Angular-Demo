@@ -25,6 +25,7 @@
 			getAllTeams: getAllTeams,
 			getTeamByName: getTeamByName,
 			getAllPlayers: getAllPlayers,
+			getTopScorers: getTopScorers,
 			getPlayersByCountry: getPlayersByCountry,
 			getPlayerById: getPlayerById,
 			getAllClubs: getAllClubs
@@ -188,6 +189,21 @@
 						fields: 'id,name,country,logo'
 					}
 				}).then(function (response){
+					return response.data;
+				});
+
+			return promise;
+		}
+
+		function getTopScorers() {
+			var promise = $http
+				.get(apiUrl + 'players',{
+					params: {
+						sort: 'goals,-1',
+						limit: 10
+					}
+				})
+				.then(function (response){
 					return response.data;
 				});
 

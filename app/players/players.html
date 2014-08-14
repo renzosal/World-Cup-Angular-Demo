@@ -1,0 +1,59 @@
+<section id="players-view" class="mainbar" >
+<div class="container-fluid">
+	<div class="page-header">
+	  <h1>Players</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div id="top-scorers" class="panel panel-default">
+				<div class="panel-heading">Top 10 Scorers</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-6 col-sm-push-6">
+							<div class="player-image">
+								<img src="{{vm.selectedPlayer.image}}" />
+							</div>
+							<dl class="dl-horizontal">
+							  <dt>First Name</dt>
+							  <dd>{{vm.selectedPlayer.firstName}}</dd>
+							  <dt>Last Name</dt>
+							  <dd>{{vm.selectedPlayer.lastName}}</dd>
+							  <dt>Birth Date</dt>
+							  <dd>{{vm.selectedPlayer.birthDate | date:'MM/dd/yyyy'}}</dd>
+							  <dt>Place of Birth</dt>
+							  <dd>{{vm.selectedPlayer.birthCity}}, {{vm.selectedPlayer.birthCountry}}</dd>
+							  <dt>Age</dt>
+							  <dd>{{vm.selectedPlayer.age}}</dd>
+							  <dt>Height</dt>
+							  <dd>{{vm.selectedPlayer.heightCm}} cm</dd>
+							  <dt>Weight</dt>
+							  <dd>{{vm.selectedPlayer.weightKg}} Kg</dd>
+							  <dt>Foot</dt>
+							  <dd>{{vm.selectedPlayer.foot}}</dd>
+							  <dt>Position</dt>
+							  <dd>{{vm.selectedPlayer.position}}</dd>
+							</dl>
+						</div>
+						<div class="col-sm-6 col-sm-pull-6">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Goals</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-click="vm.setSelected(player.id)" ng-repeat="player in vm.topScorers" ng-class="{success: player.id == vm.selectedPlayer.id}">
+										<td>{{player.nickname}}</td>
+										<td>{{player.goals}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>

@@ -107,8 +107,8 @@
 					controller: 'players',
 					controllerAs: 'vm',
 					resolve: {
-						players: function (playersResolver){
-							return playersResolver.allPlayers();
+						topScorers: function (playersResolver){
+							return playersResolver.topScorers();
 						}
 					}
 				}

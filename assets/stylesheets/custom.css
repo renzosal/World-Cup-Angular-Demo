@@ -620,6 +620,9 @@ a {
 #match-view .match-info .match-score span {font-size: 30px;}
 #match-view .match-info .match-date {font-size: 20px; margin-top: 20px;}
 
+#players-view #top-scorers tr {cursor: pointer;}
+#players-view #top-scorers .player-image { text-align: center;}
+#players-view #top-scorers dl  {margin: 0 auto;}
 .page-splash-wc-logo {
     background: url('../images/worldcup.png') 50% 50% no-repeat; 
     width: 200px; 
