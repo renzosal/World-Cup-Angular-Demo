@@ -9,6 +9,7 @@
 
 	var config = {
 		appErrorPrefix: '[World Cup Error]: ',
+		CachePrefix: '[World Cup Cache]: ',
 		imagePath: '../assets/images/',
 		keyCodes: keyCodes,
 		appName: 'World Cup',
