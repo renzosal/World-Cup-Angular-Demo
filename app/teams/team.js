@@ -11,7 +11,7 @@
 
 	function team (team, players) {
 		var vm = this;
-
+		
 		vm.team = team;
 		vm.players = players;
 		

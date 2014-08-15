@@ -14,7 +14,6 @@
 
 		vm.match = match;
 		
-		console.log(match);
 		return vm;
 
 	}

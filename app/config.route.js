@@ -109,6 +109,9 @@
 					resolve: {
 						topScorers: function (playersResolver){
 							return playersResolver.topScorers();
+						},
+						allPlayers: function (playersResolver){
+							return playersResolver.allPlayers();
 						}
 					}
 				}
