@@ -30,7 +30,6 @@
 				return datacontext
 					.getTeamByName(name)
 					.then(function (data) {
-						console.log("data", data);
 						return $q.when(data);
 					});
 			}

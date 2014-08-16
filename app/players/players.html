@@ -58,14 +58,14 @@
 	<hr/>
 	<div class="row">
 		<div class="col-sm-12">
-			<input class="form-control" type="text" placeholder="Search Teams" ng-model="vm.playerName" >
+			<input class="form-control" type="text" placeholder="Search Player By Any Column" ng-model="vm.playerSearch" >
 			<br/>
 		</div>
 		<div class="pager-info col-sm-4">
 			<p><b>Page {{vm.currentPage}} of {{vm.numPages}}</b></p>
 		</div>
 		<div class="col-sm-8">
-			<pagination total-items="vm.totalPlayers" ng-model="vm.currentPage" max-size="5" class="pagination-sm pull-right" boundary-links="true" rotate="false" items-per-page="vm.pageSize" num-pages="vm.numPages"></pagination>
+			<pagination total-items="vm.filteredPlayers.length" ng-model="vm.currentPage" max-size="5" class="pagination-sm pull-right" boundary-links="true" rotate="false" items-per-page="vm.pageSize" num-pages="vm.numPages"></pagination>
 
 		</div>		
 	</div>
@@ -84,7 +84,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="player in vm.allPlayers | startFrom: (vm.currentPage - 1) * vm.pageSize | limitTo: vm.pageSize | filter: vm.playerName">
+							<tr ng-repeat="player in vm.filteredPlayers | startFrom: (vm.currentPage - 1) * vm.pageSize | limitTo: vm.pageSize">
 								<td><img width="40px" src="{{player.image}}" /></td>
 								<td><a href="#/players/{{player.id}}">{{player.nickname}}</a></td>
 								<td>{{player.age}}</td>
@@ -101,7 +101,7 @@
 			<p><b>Page {{vm.currentPage}} of {{vm.numPages}}</b></p>
 		</div>
 		<div class="col-sm-8">
-			<pagination total-items="vm.totalPlayers" ng-model="vm.currentPage" max-size="5" class="pagination-sm pull-right" boundary-links="true" rotate="false" items-per-page="vm.pageSize" num-pages="vm.numPages"></pagination>
+			<pagination total-items="vm.filteredPlayers.length" ng-model="vm.currentPage" max-size="5" class="pagination-sm pull-right" boundary-links="true" rotate="false" items-per-page="vm.pageSize" num-pages="vm.numPages"></pagination>
 
 		</div>		
 	</div>
