@@ -7,9 +7,9 @@
 	.module('app')
 	.factory(serviceId, dashboardResolver);
 
-	dashboardResolver.$inject = ['$q', 'datacontext'];
+	dashboardResolver.$inject = ['$q', 'datacontext', 'config'];
 
-	function dashboardResolver($q, datacontext) {
+	function dashboardResolver($q, datacontext, config) {
 		var data = {
 			groups: getAllGroups,
 			secondStage: getSecondStageMatches
@@ -30,7 +30,21 @@
 			return datacontext
 				.getSecondStageMatches()
 				.then(function (data){
-					return $q.when(data);
+
+					var bracket = {
+						round16: [],
+						quarters: [],
+						semis: [],
+						thirdPlace: [],
+						final: []
+					};
+					_(config.secondStageMatchIds).forEach(function(round, key){
+						_(round).forEach(function(matchId){
+							bracket[key].push(_.where(data, {id: matchId}));
+						});
+					});
+
+					return $q.when(bracket);
 				});
 
 		}
