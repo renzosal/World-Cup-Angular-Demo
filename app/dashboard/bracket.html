@@ -1,0 +1,60 @@
+<div class="brackets-wrap table-responsive">
+    <table class="table">
+        <thead class="header-wrap">
+            <tr>
+                <th><span>Round of 16</span>
+                </th>
+                <th><span>Quarter Finals</span>
+                </th>
+                <th><span>Semi Finals</span>
+                </th>
+                <th><span>Final</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="content-wrap">
+            <tr>
+                <td class="round-col round-1">
+                    <div class="match-wrap" ng-class="{first:$first}" ng-repeat="match in bracket.round16">
+                        <div class="team home">
+                            <span class="round-match-info">{{match[0].home.name}} {{match[0].homeScore}} ({{match[0].homePenalties}})</span>
+                        </div>
+                        <div class="team away">
+                            <span class="round-match-info">{{match[0].away.name}} {{match[0].awayScore}} ({{match[0].awayPenalties}})</span>
+                        </div>
+                    </div>
+                </td>
+                <td class="round-col round-2">
+                    <div class="match-wrap" ng-class="{first:$first}" ng-repeat="match in bracket.quarters">
+                        <div class="team home">
+                            <span class="round-match-info">{{match[0].home.name}} {{match[0].homeScore}} ({{match[0].homePenalties}})</span>
+                        </div>
+                        <div class="team away">
+                            <span class="round-match-info">{{match[0].away.name}} {{match[0].awayScore}} ({{match[0].awayPenalties}})</span>
+                        </div>
+                    </div>                    
+                </td>
+                <td class="round-col round-3">
+                    <div class="match-wrap" ng-class="{first:$first}" ng-repeat="match in bracket.semis">
+                        <div class="team home">
+                            <span class="round-match-info">{{match[0].home.name}} {{match[0].homeScore}} ({{match[0].homePenalties}})</span>
+                        </div>
+                        <div class="team away">
+                            <span class="round-match-info">{{match[0].away.name}} {{match[0].awayScore}} ({{match[0].awayPenalties}})</span>
+                        </div>
+                    </div>
+                </td>
+                <td class="round-col round-4">
+                    <div class="match-wrap" ng-class="{first:$first}" ng-repeat="match in bracket.final">
+                        <div class="team home">
+                            <span class="round-match-info">{{match[0].home.name}} {{match[0].homeScore}} ({{match[0].homePenalties}})</span>
+                        </div>
+                        <div class="team away">
+                            <span class="round-match-info">{{match[0].away.name}} {{match[0].awayScore}} ({{match[0].awayPenalties}})</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

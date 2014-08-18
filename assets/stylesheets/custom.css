@@ -70,6 +70,29 @@ table th > a { font-weight: bold; }
 .match .away .team-image {right:0; position: absolute;}
 .match .away .team-name {right:0; text-align: left; margin-right: 65px; margin-left:0; text-align: right; position: absolute;}
 
+.brackets-wrap table th, .brackets-wrap table td {width: 260px;}
+.brackets-wrap table td.round-col { padding: 15px 0; float: none; display: table-cell; text-align: center; }
+.brackets-wrap table td.round-col .match-wrap { margin-right: 8px; }
+.brackets-wrap table td.round-col .match-wrap.first { margin-top: 0px !important; }
+.brackets-wrap table td.round-col .match-wrap .team .round-match-info { position: absolute; left:0; right: 0; display: block; background: #ddd; font-size: 14px; padding: 8px 8px; }
+.brackets-wrap table td.round-col .match-wrap .team.away .round-match-info { bottom: 0;}
+
+.brackets-wrap table td.round-col.round-1 .match-wrap { margin-top: 20px; }
+.brackets-wrap table td.round-col.round-1 .match-wrap .team { position: relative; height: 82px; border-right: 8px solid #ddd; }
+
+.brackets-wrap table td.round-col.round-2 { padding: 80px 0;}
+.brackets-wrap table td.round-col.round-2 .match-wrap { margin-top: 150px; }
+.brackets-wrap table td.round-col.round-2 .match-wrap .team { position: relative; height: 108px; border-right: 8px solid #ddd; }
+
+.brackets-wrap table td.round-col.round-3 { padding: 170px 0;}
+.brackets-wrap table td.round-col.round-3 .match-wrap { margin-top: 335px; }
+.brackets-wrap table td.round-col.round-3 .match-wrap .team { position: relative; height: 200px; border-right: 8px solid #ddd; }
+
+.brackets-wrap table td.round-col.round-4 { padding: 350px 0;}
+.brackets-wrap table td.round-col.round-4 .match-wrap { margin-top: 20px; }
+.brackets-wrap table td.round-col.round-4 .match-wrap .team { position: relative; height: 390px; border-right: 8px solid #ddd; }
+
+
 .carousel-control,.carousel-control:hover {color:#333; height: 30px; background: none !important;}
 .carousel-indicators {top: 10px; height: 20px;}
 .carousel-indicators li {border: 1px solid #3A3A3A;}

@@ -17,6 +17,7 @@
 		vm.groups = groups;
 		vm.groupKeys = groupKeys;
 
+		vm.secondStage = secondStage;
 		vm.matchesByDate = matches;
 		vm.matchesCount = matches.length;
 		vm.title = 'Dashboard';

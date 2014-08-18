@@ -58,4 +58,30 @@
  			}
  		}
 
+
+/**
+ * @desc wcBracket directive to generate the second stage bracket
+ * @file directive.js
+ * @example <div wc-bracket></div>
+ */
+
+ 	angular
+ 		.module('app')
+ 		.directive('wcBracket', wcBracket);
+
+ 		function wcBracket () {
+ 			var directive = {
+ 				restrict: 'AE',
+ 				scope: {
+ 					bracket: '=wcBracket'
+ 				},
+ 				link: link,
+ 				templateUrl: 'app/dashboard/bracket.html?v=2' 
+ 			};
+
+ 			return directive;
+
+ 			function link (scope, element) {
+ 			}
+ 		}
 })();
