@@ -55,6 +55,7 @@
 
  			function link (scope, element) {
  				$animate.enabled(false, element);
+ 				console.log($animate);
  			}
  		}
 
