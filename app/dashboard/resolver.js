@@ -12,11 +12,20 @@
 	function dashboardResolver($q, datacontext, config) {
 		var data = {
 			groups: getAllGroups,
-			secondStage: getSecondStageMatches
+			secondStage: getSecondStageMatches,
+			test: test
 		};
 
 		return data;
 
+
+		function test(year) {
+			return datacontext
+				.testCall(year)
+				.then(function (data){
+					return $q.when(data);
+				});
+		}
 
 		function getAllGroups() {
 			return datacontext

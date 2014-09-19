@@ -28,11 +28,34 @@
 			getTopScorers: getTopScorers,
 			getPlayersByCountry: getPlayersByCountry,
 			getPlayerById: getPlayerById,
-			getAllClubs: getAllClubs
+			getAllClubs: getAllClubs,
+			testCall: testCall
 		};
 
 		return service;
+			function testCall (year) {
 
+			var promise = $http
+				.get(apiUrl + 'http://api.worldbank.org/countries/all/indicators/NY.GNP.PCAP.CD',
+					{
+						params: {
+						per_page: 260,
+						date: year,
+						format: 'json'
+						}
+					})
+					.then(function (response) {
+					var mapData = {};
+					_.each(response.data[1], function (GDP) {
+						mapData[GDP.country.id.toLowerCase()] = GDP.value;
+					});
+					return $q.when(mapData);
+					});
+
+			return promise;
+
+
+			}
 		function getAllMatches() {
 
 			var promise = $http

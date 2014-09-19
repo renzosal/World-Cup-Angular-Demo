@@ -36,6 +36,9 @@
 						},
 						secondStage: function (dashboardResolver){
 							return dashboardResolver.secondStage();
+						},
+						test: function (dashboardResolver){
+							return dashboardResolver.test();
 						}
 					}
 				}
